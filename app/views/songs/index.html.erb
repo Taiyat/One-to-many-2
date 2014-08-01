@@ -1,0 +1,29 @@
+<h1>Songs</h1>
+
+<p><a href="/new_song">Add a New Song</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @songs.each do |song| %>
+    <tr>
+          <td><%= song.name %></td>
+          <td><%= song.image %></td>
+          <td><a href="/songs/<%= song.id %>">Show</a>
+        </td>
+      <td><a href="/songs/<%= song.id %>/edit">Edit</a></td>
+      <td><a href="/songs/<%= song.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

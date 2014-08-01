@@ -1,0 +1,13 @@
+<h1>Song #<%= @song.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @song.name %></p>
+</div>
+<div>
+  <strong>Image</strong>:<br />
+  <p><%= @song.image %></p>
+</div>
+
+<a href="/songs/<%= @song.id %>/edit">Edit</a> |
+<a href="/songs/<%= @song.id %>/destroy">Destroy</a>
